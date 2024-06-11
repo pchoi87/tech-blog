@@ -1,0 +1,11 @@
+<form id="comment-form">
+  <textarea id="comment-text" name="comment" rows="4" cols="50" placeholder="Add a comment..."></textarea>
+  <button type="submit">Submit</button>
+</form>
+
+{{#each comments}}
+<div class="comment">
+  <p>{{this.text}}</p>
+  <p>Posted by {{this.user.username}} on {{this.createdAt}}</p>
+</div>
+{{/each}}
